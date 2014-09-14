@@ -1,0 +1,15 @@
+<h1> Add an item to share with your neighbors! </h1>
+
+<%= form_for @item do |f| %>
+  <%= f.label :item_name %>
+  <%= f.text_field :name %>
+
+  <%= f.label :status %>
+  <%= f.text_field :status %>
+
+  <%= f.label :condition %>
+  <%= f.text_field :condition %>
+
+  <%= f.submit "Add your item to the Community Share List" %> <%= link_to "Back to the Community Share List", items_path %>
+
+  <% end %>

@@ -1,0 +1,23 @@
+<!-- Name of file important b/c it matches route and controller action -->
+
+<h1> Welcome to the Santa Monica Cottages Community Sharing </h1>
+
+
+<h2>Here is a list of the Community Items:</h2>
+
+<ul>
+  <!-- Index views generally loop through all instances of a given model item -->
+  <% @items.each do |i| %>
+    <li>
+      <!-- the loop populates the list item tags with each item's name and availability -->
+      <strong> <%= i.name %> </strong> -- <%= i.status %>
+    </li>
+  <% end %>
+</ul>
+
+
+
+  <%= link_to "Add your item to the Community Share List", new_item_path %>
+
+
+

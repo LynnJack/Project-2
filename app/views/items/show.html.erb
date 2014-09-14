@@ -1,0 +1,9 @@
+<!-- I directly calling @item to access its fields --> 
+<h1> <%=@item.name %> </h1>
+
+<p> This <%= @item.name %> is <%= @item.status %> and ready for pick-up from your neighbor.
+</p>
+
+<!-- Addition link sending user back to the index view -->
+<!-- The named route for an index view will always be controller name (plural) underscore path
+<%= link_to "Back to the Community Items List!", items_path
