@@ -29,7 +29,7 @@ class ItemsController < ApplicationController
   end
 
   def update
-    @item = Bean.find(params[:id])
+    @item = Item.find(params[:id])
     if @item.update_attributes(params.require(:item).permit(:name, :status, :condition))
       redirect_to items_path
     else

@@ -11,13 +11,23 @@
     <li>
       <!-- the loop populates the list item tags with each item's name and availability -->
       <strong> <%= i.name %> </strong> -- <%= i.status %>
+      <%= link_to "Show details!", item_path(i) %>
+
     </li>
   <% end %>
 </ul>
 
 
+  <%= link_to "Add your item to the Share List", new_item_path %>
 
-  <%= link_to "Add your item to the Community Share List", new_item_path %>
+
+  <% if logged_in? %>
+    <p> You're logged in! </p>
+      <%= link_to  "Log Out", log_out_path, method: :delete %>
+  <% else %>
+      <%= render partial: "sessions/login" %>
+  <% end %>
+
 
 
 

@@ -2,6 +2,28 @@
 
 
 
+#######################
+# SESSIONS RESOURCES
+#######################
+#  'sessions#new'
+root 'items#index'
+
+get '/login' => 'sessions#new', as: :sessions
+post '/login' => 'sessions#create'
+delete '/logout' => 'sessions#destroy', as: :log_out
+
+
+
+#####################
+# USERS RESOURCE
+#####################
+
+get '/signup' => 'users#new', as: :signup
+get 'users/new' => 'users#new'
+# this http post request, routes to save a user in MongoDB
+post 'users/' => 'users#create'
+
+
 ####################
 # ITEMS RESOURCE
 ####################
@@ -10,7 +32,7 @@
   get 'items/' => 'items#index'
   # HTTP verb for show is GET.  Show used to provide detail for a single record
                                    #  Sets a named route of item_path
-  
+  post 'items/' => 'items#create'
 
   # the HPPT verb for new is GET.
   get 'items/new' => 'items#new', as: :new_item
@@ -18,7 +40,16 @@
   # the HPPT verb for create is POST.
   post 'items/' => 'users#create'
 
-  get 'items/:id' => 'items#show'
+  get 'items/:id' => 'items#show', as: :item
+
+
+  get 'items/:id/edit' => 'items#edit', as: :edit_item
+  patch 'items/:id' => 'items#update'
+
+  get 'items/:id/edit' => 'items#edit', as: :return_item
+  patch 'items/:id' => 'items#update'
+
+
 
 
 

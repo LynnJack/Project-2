@@ -1,0 +1,13 @@
+
+<h1></h1>
+
+<%= form_for @item do |f| %>
+  <%= f.label :name %> <%= f.text_field :name %><br>
+  Status: <%= f.text_field :status %><br>
+
+
+  <%= f.submit "Borrow this item" %>
+  <%= f.submit "Return this item" %>
+<% end %>
+
+<%= link_to "Back to the list!", items_path %>
