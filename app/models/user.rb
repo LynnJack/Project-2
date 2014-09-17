@@ -7,9 +7,12 @@ class User
   field :name, type: String
   field :email, type: String
   field :password_digest, type: String
+  field :unit, type: Integer
 
 #  I'e defined an assessor method to return the value of an instance variable @password
   attr_reader :password 
+
+  has_many :items
 
 #  This method is asking BCrypt to create a new password hash
 # Allows setting of the password
@@ -27,6 +30,7 @@ class User
       false
     end
   end
+
 end
 
 

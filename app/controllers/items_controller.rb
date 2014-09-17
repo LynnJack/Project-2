@@ -17,6 +17,7 @@ class ItemsController < ApplicationController
 
   def create
     @item = Item.new(params.require(:item).permit(:name, :status, :condition))
+    @item.user = current_user  # setting the cu to the owner of item
     if @item.save
       redirect_to items_path
     else

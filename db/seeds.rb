@@ -9,3 +9,4 @@
 
 items = Item.create([{ name: "Vacuum", status: "Available", condition: "Excellent"}, { name: "Ladder", status: "Available", condition: "Excellent"}, { name: "Tent", status: "Available", condition: "Good"}, { name: "Bicycle Pump", status: "Available", condition: "Good"}])
 
+users = User.create([{ name: "Lynn", unit: 510, email: "lynn@lynn.com"}, { name: "Sally", unit: 101, email: "sally@sally.com"}])
