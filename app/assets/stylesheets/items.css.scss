@@ -1,3 +1,14 @@
 // Place all the styles related to the items controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+body {
+  background: url("painted-ladies.jpg");
+  background-size:cover;
+}
+
+.white {
+  background: rgba(255,255,255,0.7);
+  border-radius: 10px;
+  margin-top:20px;
+}
