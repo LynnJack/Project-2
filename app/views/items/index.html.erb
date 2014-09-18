@@ -1,34 +1,34 @@
 <!-- Name of file important b/c it matches route and controller action -->
 <div class="container white">
-  <h1> Welcome to the Santa Monica Cottages Community Sharing </h1>
+  <h1> Welcome to the SF Cottages Community Sharing </h1>
+
+  
+    <h2>Here is a list of the Share Items:</h2>
+
+      <ul>
+        <!-- Index views generally loop through all instances of a given model item -->
+        <% @items.each do |i| %>
+          <li>
+            <!-- the loop populates the list item tags with each item's name and availability -->
+            <strong> <%= i.name %> </strong> -- <%= i.status %>
+            <%= link_to "Show details!", item_path(i) %>
+          </li>
+        <% end %>
+      </ul>
 
 
-  <h2>Here is a list of the Community Items:</h2>
-
-  <ul>
-    <!-- Index views generally loop through all instances of a given model item -->
-    <% @items.each do |i| %>
-      <li>
-        <!-- the loop populates the list item tags with each item's name and availability -->
-        <strong> <%= i.name %> </strong> -- <%= i.status %>
-        <%= link_to "Show details!", item_path(i) %>
-      </li>
-    <% end %>
-  </ul>
+        <%= link_to "Add your item to the Share List", new_item_path %>
 
 
-    <%= link_to "Add your item to the Share List", new_item_path %>
+        <% if logged_in? %>
+          <p> You're logged in! </p>
+            <%= link_to  "Log Out", log_out_path, class: "btn btn-primary", method: :delete %>
+        <% else %>
+       <!--     <%= render partial: "sessions/login" %> -->
+        <% end %>
 
 
-    <% if logged_in? %>
-      <p> You're logged in! </p>
-        <%= link_to  "Log Out", log_out_path, method: :delete %>
-    <% else %>
-   <!--     <%= render partial: "sessions/login" %> -->
-    <% end %>
-
-
-
+  
   <%= link_to "Sign Up & Join", users_new_path, class: "btn btn-primary" %>
   <%= link_to "Sign In", sessions_path, class: "btn btn-primary" %>
 

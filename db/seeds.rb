@@ -8,9 +8,9 @@
 Item.destroy_all
 User.destroy_all
 
-items = Item.create([{ name: "Vacuum", status: "Available", condition: "Excellent"},
-  { name: "Ladder", status: "Available", condition: "Excellent"},
-  { name: "Camping Tent", status: "Available", condition: "Good"},
+items = Item.create([{ name: "Dyson Vacuum", status: "Available", condition: "Excellent"},
+  { name: "10' Ladder", status: "Available", condition: "Excellent"},
+  { name: "Two-Person Camping Tent", status: "Available", condition: "Good"},
   { name: "Bicycle Pump", status: "Available", condition: "Good"},
   { name: "Ice Cooler", status: "Available", condition: "Good"},
   { name: "Plunger", status: "Available", condition: "Good"},

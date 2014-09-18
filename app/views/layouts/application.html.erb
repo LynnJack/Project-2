@@ -16,10 +16,15 @@
 
   <% if logged_in? %>
     <p> You're logged in! </p>
-      <%= link_to  "Log Out", log_out_path, method: :delete %>
-  <% else %>
-      <%= render partial: "sessions/login" %> 
+      <%= link_to  "Log Out", log_out_path, class: "btn btn-primary", method: :delete %>
   <% end %>
+  
+
   <%= yield %>
+
+
 </body>
 </html>
+
+
+
