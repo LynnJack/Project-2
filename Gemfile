@@ -13,6 +13,8 @@ gem 'mongoid', github: 'mongoid/mongoid'
 # For password hash, logging in
 gem 'bcrypt', '~> 3.1.7'
 
+gem 'rails_12factor'
+
 
 ################
 # RAILS GEMS
