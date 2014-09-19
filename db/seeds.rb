@@ -31,14 +31,14 @@ items = Item.create([{ name: "Dyson Vacuum", status: "Available", condition: "Ex
      
 
 
-# users = User.create([{ name: "Lynn Jaxon", unit: 510, email: "lynn@lynn.com"},
-#  { name: "Sally Sooko", unit: 101, email: "sally@sally.com"},
-#  { name: "Brian Rosen", unit: 415, email: "brian@brian.com"}, 
-#  { name: "Carey Harrison", unit: 408, email: "carey@carey.com"}, 
-#  { name: "Hugh O'Donnell", unit: 310, email: "hugh@hugh.com"},
-#  { name: "Carlo Smillie", unit: 213, email: "carlo@carlo.com"},
-#  { name: "Debbie Chandra", unit: 888, email: "debbie@debbie.com"},
-#  { name: "Jim Jaxon", unit: 510, email: "jim@jim.com"}])
+users = User.create([{ name: "Lynn Jaxon", unit: 510, email: "lynn@lynn.com"},
+ { name: "Sally Sooko", unit: 101, email: "sally@sally.com"},
+ { name: "Brian Rosen", unit: 415, email: "brian@brian.com"}, 
+ { name: "Carey Harrison", unit: 408, email: "carey@carey.com"}, 
+ { name: "Hugh O'Donnell", unit: 310, email: "hugh@hugh.com"},
+ { name: "Carlo Smillie", unit: 213, email: "carlo@carlo.com"},
+ { name: "Debbie Chandra", unit: 888, email: "debbie@debbie.com"},
+ { name: "Jim Jaxon", unit: 510, email: "jim@jim.com"}])
 
 users[0].items = [items[0], items[1]]
 users[1].items = [items[3], items[6]]
