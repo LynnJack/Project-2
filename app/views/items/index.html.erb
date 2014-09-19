@@ -2,19 +2,40 @@
 <div class="container white">
   <h1> Welcome to the SF Cottages Community Sharing </h1>
 
-  
+    
     <h2>Here is a list of the Share Items:</h2>
 
-      <ul>
+
+
+      <table class="table">
+
+        <thead>
+          <th> Share Item</th>
+          <th> Status </th>
+          <th> Item Details</th>
+        </thead>
+
         <!-- Index views generally loop through all instances of a given model item -->
         <% @items.each do |i| %>
-          <li>
+          <tr>
             <!-- the loop populates the list item tags with each item's name and availability -->
-            <strong> <%= i.name %> </strong> -- <%= i.status %>
-            <%= link_to "Show details!", item_path(i) %>
-          </li>
+            
+            <td> <%= i.name %> </td>  
+             <td> <%= i.status %> </td>
+            <td> <%= link_to "Show details!", item_path(i) %>  </td>
+          </tr>
         <% end %>
-      </ul>
+      </table>
+
+
+
+
+
+
+
+
+
+
 
 
         <%= link_to "Add your item to the Share List", new_item_path %>
@@ -31,7 +52,7 @@
   
   <%= link_to "Sign Up & Join", users_new_path, class: "btn btn-primary" %>
   <%= link_to "Sign In", sessions_path, class: "btn btn-primary" %>
-
+      
 </div>
 
 

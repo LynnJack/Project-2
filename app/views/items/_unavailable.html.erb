@@ -1,7 +1,21 @@
 <h1> <%=@item.name %> </h1>
 
+
+<div class="available"
 <p> This <%= @item.name %> is <%= @item.status %>.  Please check back in a few days for availability.  
 </p>
-
+</div>
 <%= link_to "Back to Share List!", items_path %>
 
+
+
+<%= form_for @item do |f| %>
+  <%= f.label :name %> <%= f.text_field :name %><br>
+  Status: <%= f.select :status, [['Available', 'Available'], ['Unavailable', 'Unavailable']] %><br>
+
+
+
+  <%= f.submit "Return this item" %>
+<% end %>
+
+<%= link_to "Back to the list!", items_path %>

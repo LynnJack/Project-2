@@ -1,7 +1,12 @@
 <h1> <%=@item.name %> </h1>
 
+
+<div class="available">
 <p> This <%= @item.name %> is <%= @item.status %> and ready for pick-up from your neighbor at Unit <%= @item.user.unit %>.  Click here to send an email to schedule a pick-up time.
 </p>
 
 <%= link_to "Back to Share List!", items_path %>
 <%= link_to "Borrow this item", edit_item_path %>
+</div>
+
+
