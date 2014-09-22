@@ -1,4 +1,6 @@
-<h1> Add an item to share with your neighbors! </h1>
+<div class="itemcontainer">
+
+<h2> Add an item to share with your neighbors! </h2>
 
 <%= form_for @item do |f| %>
   <%= f.label :item_name %>
@@ -13,3 +15,4 @@
   <%= f.submit "Add your item to the Share List" %> <%= link_to "Back to the Community Share List", items_path %>
 
   <% end %>
+</div>

@@ -8,23 +8,20 @@
 </head>
 <body>
 
-<header>
-  Santa Monica Cottages Homeowners Association
-</header>
+  <header>
+    San Francisco Cottages Homeowners Association
+  </header>
 
 
-
-  <% if logged_in? %>
-    <p> You're logged in! </p>
+  <div class="maintext"
+    <% if logged_in? %>
+      <p> You're logged in! </p>
       <%= link_to  "Log Out", log_out_path, class: "btn btn-primary", method: :delete %>
-  <% end %>
-  
+     
+    <% end %>
+  </div>
 
   <%= yield %>
 
-
 </body>
 </html>
-
-
-

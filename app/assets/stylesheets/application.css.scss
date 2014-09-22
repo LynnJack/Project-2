@@ -14,4 +14,7 @@
 @import "bootstrap";
 @import "bootstrap-sprockets";
 
-
+body {
+  background: url("painted-ladies.jpg");
+  background-size:cover;
+}

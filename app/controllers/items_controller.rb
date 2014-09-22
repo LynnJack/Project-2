@@ -44,3 +44,16 @@ class ItemsController < ApplicationController
     redirect_to items_path
   end
 end
+
+
+
+
+
+
+
+
+
+
+
+
+
