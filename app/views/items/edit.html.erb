@@ -1,17 +1,23 @@
+<div class="itemcontainer">
+<h2></h2>
 
-<h1></h1>
+<p> To return this item, please change the status to Available and click "Return this item". </p>
+
+
 
 <%= form_for @item do |f| %>
   <%= f.label :name %> <%= f.text_field :name %><br>
   Status: <%= f.select :status, [['Available', 'Available'], ['Unavailable', 'Unavailable']] %><br>
 
 
-  <%= f.submit "Borrow this item" %>
+
   <%= f.submit "Return this item" %>
   
 <% end %>
 
 <%= link_to "Back to the list!", items_path %>
+
+</div>
 
 
 
